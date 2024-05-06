@@ -88,17 +88,17 @@ nav .mainMenu li a:hover{
 .banner{
     display: flex;
     justify-content: center;
-    max-width: 100%; /* 圖片最大寬度為容器寬度 */
-    height: 63vh;
+    border: 0;
+      max-width: 100%; /* 图片宽度自适应屏幕宽度 */
+      height: auto; /* 高度自动调整 */
 }
 
 @media screen and (max-width: 768px) {
-    .banner {
-      display: block; /* 将网格布局改为块级显示 */
-    }
+    
   
   
-    .main-banner img {
+    .banner img {
+      border: 0;
       max-width: 100%; /* 图片宽度自适应屏幕宽度 */
       height: auto; /* 高度自动调整 */
     }
@@ -173,10 +173,21 @@ nav .mainMenu li a:hover{
       height: auto; /* 高度自动调整 */
     }
   
-    .left::before,
-    .middle::before,
-    .right::before {
-      display: none; /* 在手机上隐藏文字 */
+    .left::before {
+        top: 50%; /* 上下居中 */
+        left: 50%; /* 左右居中 */
+        transform: translate(-50%, -50%); /* 居中 */
+      }
+      
+      .middle::before {
+        top: 50%; /* 上下居中 */
+        left: 50%; /* 左右居中 */
+        transform: translate(-50%, -50%); /* 居中 */
+      }
+      
+      .right::before {
+        top: 50%; /* 上下居中 */
+        left: 50%; /* 左右居中 */
+        transform: translate(-50%, -50%); /* 居中 */
+      }
     }
-  }
-  
